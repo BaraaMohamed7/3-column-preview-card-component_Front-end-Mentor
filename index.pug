@@ -26,7 +26,7 @@ html(lang="en")
         | .attribution { font-size: 11px; text-align: center; }
         |  .attribution a { color: hsl(228, 45%, 44%); }
   body
-    .container
+    main.container
       - 
         let cardTitles = [
           "Sedans",
@@ -40,7 +40,7 @@ html(lang="en")
       .cards
         - for (var i = 0; i < 3; i++)
           .card
-            img.icon(src="images/icon-"+cardTitles[i].toLowerCase()+".svg")
+            img.icon(src="images/icon-"+cardTitles[i].toLowerCase()+".svg" , alt="car icon")
             h2.card-title= cardTitles[i]
             p.card-text= cardTexts[i]
             button.cta Learn More
